@@ -1,10 +1,17 @@
 from tinydb import TinyDB, Query
 from pprint import pprint
 
+def document(dt_txt):
+    doc_list = dt_txt.split('\n')
+    doc_keys = doc_list[0].split(',')[1:]
+
+    pprint(doc_keys)
+
+
 data1 = open('products.csv')
 data2 = open('specifications.csv')
 
 data1_text = data1.read()
-pprint(data1_text)
 data2_text = data2.read()
-pprint(data2_text)
+
+document(data1_text)
