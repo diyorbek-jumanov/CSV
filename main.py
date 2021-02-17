@@ -11,7 +11,7 @@ def document(dt_txt):
             doc_full[doc_keys[i]] = x
         collection.append(doc_full)
     
-    pprint(collection)
+    return collection
         
 
 
@@ -21,4 +21,12 @@ data2 = open('specifications.csv')
 data1_text = data1.read()
 data2_text = data2.read()
 
-document(data1_text)
+d1 = document(data1_text)
+d2 = document(data2_text)
+
+db = TinyDB('db.json')
+db.truncate()
+
+table1 = db.table('products')
+table2 = db.table('specifications')
+
