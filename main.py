@@ -30,3 +30,5 @@ db.truncate()
 table1 = db.table('products')
 table2 = db.table('specifications')
 
+table1.insert_multiple(d1)
+table2.insert_multiple(d2)
