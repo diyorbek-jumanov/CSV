@@ -7,7 +7,8 @@ def document(dt_txt):
 
     for row in doc_list[1:]:
         doc_full = dict()
-        pprint(row)
+        for i, x in enumerate(row.split(',')[1:]):
+            print(i, x)
         
 
 
