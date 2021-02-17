@@ -5,7 +5,10 @@ def document(dt_txt):
     doc_list = dt_txt.split('\n')
     doc_keys = doc_list[0].split(',')[1:]
 
-    pprint(doc_keys)
+    for row in doc_list[1:]:
+        doc_full = dict()
+        pprint(row)
+        
 
 
 data1 = open('products.csv')
