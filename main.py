@@ -36,7 +36,7 @@ table1.insert_multiple(d1)
 table2.insert_multiple(d2)
 
 q = Query()
-sum_samsungs = len(table1.search(q.category=='smartphone'))
-sum_samsungs += len(table2.search(q.category=='smartphone'))
+sum_samsungs = len(table1.search(q.company=='Samsung'))
+sum_samsungs += len(table2.search(q.company=='Samsung'))
  
 print(sum_samsungs)
