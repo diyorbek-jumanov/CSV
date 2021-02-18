@@ -28,7 +28,13 @@ db = TinyDB('db.json')
 db.truncate()
 
 table1 = db.table('products')
+table1.truncate()
 table2 = db.table('specifications')
+table2.truncate()
 
 table1.insert_multiple(d1)
 table2.insert_multiple(d2)
+
+q = Query()
+
+print(db.search(q.company=='Samsung'))
