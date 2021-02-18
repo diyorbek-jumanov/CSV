@@ -24,7 +24,7 @@ data2_text = data2.read()
 d1 = document(data1_text)
 d2 = document(data2_text)
 
-db = TinyDB('db.json')
+db = TinyDB('db.json', indent=4)
 db.truncate()
 
 table1 = db.table('products')
@@ -36,5 +36,7 @@ table1.insert_multiple(d1)
 table2.insert_multiple(d2)
 
 q = Query()
-
-print(db.search(q.company=='Samsung'))
+sum_samsungs = len(table1.search(q.category=='smartphone'))
+sum_samsungs += len(table2.search(q.category=='smartphone'))
+ 
+print(sum_samsungs)
