@@ -44,4 +44,5 @@ prices = list()
 for x in full_prices:
     prices.append(int(x['price']))
 
-print(min(prices))
+# print(min(prices))
+print(max(prices))
