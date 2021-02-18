@@ -38,5 +38,8 @@ table2.insert_multiple(d2)
 q = Query()
 sum_samsungs = len(table1.search(q.company=='Samsung'))
 sum_samsungs += len(table2.search(q.company=='Samsung'))
- 
-print(sum_samsungs)
+
+full_prices = table2.search(q.price!=0)
+for x in full_prices:
+    print(x['price'])
+# pprint(full_prices)
