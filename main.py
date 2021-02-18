@@ -40,6 +40,8 @@ sum_samsungs = len(table1.search(q.company=='Samsung'))
 sum_samsungs += len(table2.search(q.company=='Samsung'))
 
 full_prices = table2.search(q.price!=0)
+prices = list()
 for x in full_prices:
-    print(x['price'])
-# pprint(full_prices)
+    prices.append(int(x['price']))
+
+print(min(prices))
